@@ -66,7 +66,7 @@ module.exports = function ({types: t}) {
         }
       },
       JSXAttribute: function JSXAttribute(path, state) {
-        if (path.node.name.name === 'class') {
+        if (path.node.name.name === 'className') {
           css = path;
         } else if (path.node.name.name === 'style') {
           style = path;
