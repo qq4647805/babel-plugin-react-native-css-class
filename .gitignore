@@ -2,7 +2,7 @@
 #
 node_modules
 npm-debug.log
-lib
+#lib
 
 # ignore testing coverage
 coverage
