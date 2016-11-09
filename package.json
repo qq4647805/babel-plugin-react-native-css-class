@@ -1,16 +1,70 @@
 {
-  "name": "babel-plugin-react-native-css-class",
-  "version": "0.1.1",
-  "description": "Use class tag in React Native Component",
-  "main": "lib/index.js",
-  "scripts": {
-    "build": "babel --presets es2015 --plugins transform-runtime src --out-dir lib",
-    "test": "npm run build && node __tests__",
-    "prepublish": "npm run build"
+  "_args": [
+    [
+      {
+        "raw": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git",
+        "spec": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:qq4647805/babel-plugin-react-native-css-class.git",
+          "sshUrl": "git+ssh://git@github.com/qq4647805/babel-plugin-react-native-css-class.git",
+          "httpsUrl": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git",
+          "gitUrl": "git://github.com/qq4647805/babel-plugin-react-native-css-class.git",
+          "shortcut": "github:qq4647805/babel-plugin-react-native-css-class",
+          "directUrl": "https://raw.githubusercontent.com/qq4647805/babel-plugin-react-native-css-class/master/package.json"
+        }
+      },
+      "/Users/zhoushichao/Desktop/test/honer"
+    ]
+  ],
+  "_from": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git",
+  "_id": "babel-plugin-react-native-css-class@0.1.1",
+  "_inCache": true,
+  "_location": "/babel-plugin-react-native-css-class",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git",
+    "spec": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:qq4647805/babel-plugin-react-native-css-class.git",
+      "sshUrl": "git+ssh://git@github.com/qq4647805/babel-plugin-react-native-css-class.git",
+      "httpsUrl": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git",
+      "gitUrl": "git://github.com/qq4647805/babel-plugin-react-native-css-class.git",
+      "shortcut": "github:qq4647805/babel-plugin-react-native-css-class",
+      "directUrl": "https://raw.githubusercontent.com/qq4647805/babel-plugin-react-native-css-class/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git#5898717ce45d4eb14517df2c02f3efd450889a98",
+  "_shasum": "56ccabc43b43be0ea329b4dea2220307c0f67dd0",
+  "_shrinkwrap": null,
+  "_spec": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git",
+  "_where": "/Users/zhoushichao/Desktop/test/honer",
+  "author": {
+    "name": "Doan Nguyen",
+    "email": "doannd@apentle.com"
+  },
+  "bugs": {
+    "url": "https://github.com/apentle/babel-plugin-react-native-css-class/issues"
   },
   "dependencies": {
     "babel-runtime": "^6.3.19"
   },
+  "description": "Use class tag in React Native Component",
   "devDependencies": {
     "babel-cli": "^6.3.17",
     "babel-core": "^6.3.21",
@@ -20,10 +74,8 @@
     "chalk": "^1.1.3",
     "diff": "^2.2.3"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git"
-  },
+  "gitHead": "5898717ce45d4eb14517df2c02f3efd450889a98",
+  "homepage": "https://github.com/apentle/babel-plugin-react-native-css-class#readme",
   "keywords": [
     "react-native-css",
     "css-class",
@@ -31,10 +83,20 @@
     "styles",
     "css"
   ],
-  "author": "Doan Nguyen <doannd@apentle.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/apentle/babel-plugin-react-native-css-class/issues"
+  "main": "lib/index.js",
+  "name": "babel-plugin-react-native-css-class",
+  "optionalDependencies": {},
+  "readme": "# babel-plugin-react-native-css-class\n[![Build Status](https://travis-ci.org/apentle/babel-plugin-react-native-css-class.svg?branch=master)](https://travis-ci.org/apentle/babel-plugin-react-native-css-class) [![npm version](https://badge.fury.io/js/babel-plugin-react-native-css-class.svg)](https://badge.fury.io/js/babel-plugin-react-native-css-class)\n\nUse class tag in React Native Component\n\n## Installation\n```bash\nnpm i --save babel-plugin-react-native-css-class\n```\n\n## Usage\nCreate file `.babelrc` in your react native project folder\n```javascript\n{\n  \"presets\": [ \"react-native\" ],\n  \"plugins\": [ \"react-native-css-class\" ]\n}\n```\n\nIn RN component, you can use `class` tag\n```javascript\n'use strict';\n\nimport React, { Component, StyleSheet, Text, View } from 'react-native';\n\nconst HelloWorld = React.createClass({\n  render() {\n    return (\n      <View class=\"container\">\n        <Text class=\"hello\" style={{ color: '#F00' }}>\n          Hello World!\n        </Text>\n      </View>\n    );\n  }\n});\n\nvar styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    flexDirection: 'row',\n    justifyContent: 'center',\n    alignItems: 'center',\n    backgroundColor: '#F5FCFF',\n  },\n  hello: {\n    fontSize: 20,\n    marginBottom: 8,\n    textAlign: 'center',\n  },\n});\n\nmodule.exports = HelloWorld;\n```\n\n## Custom options\nUpdate file `.babelrc`\n```javascript\n{\n  \"presets\": [ \"react-native\" ],\n  \"plugins\": [\n    [\"react-native-css-class\", {\n        \"pragma\": \"varStyles\"\n    }]\n  ]\n}\n```\nNote: default `pragma` is `styles`\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git"
   },
-  "homepage": "https://github.com/apentle/babel-plugin-react-native-css-class#readme"
+  "scripts": {
+    "build": "babel --presets es2015 --plugins transform-runtime src --out-dir lib",
+    "prepublish": "npm run build",
+    "test": "npm run build && node __tests__"
+  },
+  "version": "0.1.1"
 }
