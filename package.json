@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apentle/babel-plugin-react-native-css-class.git"
+    "url": "git+https://github.com/qq4647805/babel-plugin-react-native-css-class.git"
   },
   "keywords": [
     "react-native-css",
